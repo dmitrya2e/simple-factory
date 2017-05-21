@@ -1,6 +1,6 @@
 # Da2e SimpleFactory
 
-[![Build Status](https://travis-ci.org/dmitrya2e/simple-factory.svg?branch=dev)](https://travis-ci.org/dmitrya2e/simple-factory)
+[![Build Status](https://travis-ci.org/dmitrya2e/simple-factory.svg?branch=master)](https://travis-ci.org/dmitrya2e/simple-factory)
 
 SimpleFactory is a mini-package implementing Simple Factory design pattern and providing its functionality.
 

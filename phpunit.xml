@@ -6,7 +6,7 @@
          backupGlobals="false">
     <testsuites>
         <testsuite name="Da2e SimpleFactory test suite">
-            <directory suffix="Test.php">./tests</directory>
+            <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
     <filter>
