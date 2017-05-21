@@ -21,4 +21,4 @@ before_install:
 
 install: composer update $COMPOSER_FLAGS --prefer-dist
 
-script: phpunit -c phpunit.xml
+script: vendor/bin/phpunit -c phpunit.xml --debug --coverage-text
