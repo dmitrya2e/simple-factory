@@ -1,6 +1,6 @@
 # Da2e SimpleFactory
 
-[![Build Status](https://travis-ci.org/dmitrya2e/filtration-bundle.svg?branch=dev)](https://travis-ci.org/dmitrya2e/filtration-bundle)
+[![Build Status](https://travis-ci.org/dmitrya2e/simple-factory.svg?branch=dev)](https://travis-ci.org/dmitrya2e/simple-factory)
 
 SimpleFactory is a mini-package implementing Simple Factory design pattern and providing its functionality.
 
@@ -16,6 +16,38 @@ $factory->create(TheObjectYouNeedToCreate::class, ['optional', 'array', 'of', 'c
 ```
 
 The order of the constructor arguments matters!
+
+To automate the process of creating homogeneous objects with the same constructor arguments, you could simply create a wrapper for the SimpleFactory and pass the required arguments to its constructor, as follows:
+
+```php
+<?php
+
+use Da2e\SimpleFactory\SimpleFactory;
+
+class MySimpleFactory extends SimpleFactory
+{
+    private $dependency;
+    
+    public function __construct($dependency)
+    {
+        $this->dependency = $dependency;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function create(string $class, array $constructorArgs = [])
+    {
+        parent::create($class, array_merge([$this->dependency], $constructorArgs));
+    }
+}
+
+$factory = new MySimpleFactory('foobar');
+$factory->create(TheObjectYouNeedToCreate1::class);
+$factory->create(TheObjectYouNeedToCreate2::class);
+$factory->create(TheObjectYouNeedToCreate3::class);
+
+```
 
 ## Software requirements
 
