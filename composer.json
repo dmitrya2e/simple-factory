@@ -1,0 +1,41 @@
+{
+    "name": "da2e/simple-factory",
+    "type": "library",
+    "description": "Mini-package implementing and providing a Simple Factory (design pattern) functionality.",
+    "keywords": [
+        "php",
+        "simple",
+        "factory",
+        "design",
+        "pattern",
+        "code"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Abrosimov",
+            "email": "abrosimovs@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Da2e\\SimpleFactory\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Da2e\\SimpleFactory\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
